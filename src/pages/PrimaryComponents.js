@@ -2,6 +2,7 @@ import React from "react";
 import { useRouteMatch } from "react-router-dom";
 import { LinkItem } from "../components/LinkItem";
 import { PageWrapper } from "../components/PageWrapper";
+import { UnorderedLinkItems } from "../components/UnorderedLinkItems";
 
 export const PrimaryComponents = () => {
   const { url } = useRouteMatch();
@@ -9,18 +10,11 @@ export const PrimaryComponents = () => {
   return (
     <PageWrapper>
       <h1>Primary Components</h1>
-      <ul
-        style={{
-          listStyle: "none",
-          margin: "0",
-          padding: "0",
-          textAlign: "center",
-        }}
-      >
+      <UnorderedLinkItems>
         <LinkItem to={`${url}/router`}>Router</LinkItem>
         <LinkItem to={`${url}/route-matchers`}>Route Matchers</LinkItem>
         <LinkItem to={`${url}/navigations`}>Navigations</LinkItem>
-      </ul>
+      </UnorderedLinkItems>
     </PageWrapper>
   );
 };
