@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom";
 import { useRenderCount } from "../useRenderCount";
 
 const HeaderItem = ({ label, to, exact = false }) => (
-  <NavLink to={to} activeStyle={{ color: "red" }} exact={exact}>
+  <NavLink
+    to={to}
+    activeStyle={{ color: "red" }}
+    style={{ textDecoration: "none" }}
+    exact={exact}
+  >
     <h4 style={{ marginRight: "50px" }}>{label}</h4>
   </NavLink>
 );
