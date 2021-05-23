@@ -5,9 +5,9 @@ export const Button = ({ to, children }) => (
   <Link to={to}>
     <button
       style={{
-        fontSize: "30px",
+        fontSize: "20px",
         fontWeight: "bold",
-        padding: "20px 100px",
+        padding: "15px 60px",
         borderRadius: "20px",
         backgroundColor: "red",
         color: "white",

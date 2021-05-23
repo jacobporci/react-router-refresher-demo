@@ -8,7 +8,15 @@ export const PrimaryComponents = () => {
 
   return (
     <PageWrapper>
-      <ul>
+      <h1>Primary Components</h1>
+      <ul
+        style={{
+          listStyle: "none",
+          margin: "0",
+          padding: "0",
+          textAlign: "center",
+        }}
+      >
         <LinkItem to={`${url}/router`}>Router</LinkItem>
         <LinkItem to={`${url}/route-matchers`}>Route Matchers</LinkItem>
         <LinkItem to={`${url}/navigations`}>Navigations</LinkItem>
