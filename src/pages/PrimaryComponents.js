@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import { LinkItem } from "../components/LinkItem";
-import { PageWrapper } from "../components/PageWrapper";
 import { UnorderedLinkItems } from "../components/UnorderedLinkItems";
 import { Router } from "../PrimaryComponents/Router";
 import { useRenderCount } from "../useRenderCount";
@@ -11,7 +10,7 @@ export const PrimaryComponents = () => {
   const { url, path } = useRouteMatch();
 
   return (
-    <PageWrapper>
+    <div>
       <Route path={path} exact>
         <h1>Primary Components</h1>
         <UnorderedLinkItems>
@@ -23,6 +22,6 @@ export const PrimaryComponents = () => {
       <Switch>
         <Route path={`${path}/router`} component={Router} />
       </Switch>
-    </PageWrapper>
+    </div>
   );
 };
