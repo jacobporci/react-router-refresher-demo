@@ -1,37 +1,29 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useRenderCount } from "../useRenderCount";
-
-const HeaderItem = ({ label, to, exact = false }) => (
-  <NavLink
-    to={to}
-    activeStyle={{ color: "red" }}
-    style={{ textDecoration: "none" }}
-    exact={exact}
-  >
-    <h4 style={{ marginRight: "50px" }}>{label}</h4>
-  </NavLink>
-);
+import { NavLinkItem } from "./NavLinkItem";
 
 export const Header = () => {
   useRenderCount({ componentName: "<Header />" });
 
   return (
-    <div
-      style={{
-        width: "100%",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        display: "flex",
-        padding: "5px 20px",
-        borderBottom: "1px solid black",
-      }}
-    >
-      <HeaderItem to="/" label="Home" exact />
-      <HeaderItem to="/topics" label="Topics to Cover" />
-      <HeaderItem to="/intro" label="Intro" />
-      <HeaderItem to="/primary-components" label="Primary Components" />
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <ul
+        style={{
+          listStyle: "none",
+          width: "100%",
+          display: "flex",
+          padding: "20px",
+          margin: "0",
+          borderBottom: "1px solid black",
+        }}
+      >
+        <NavLinkItem to="/" exact>
+          Home
+        </NavLinkItem>
+        <NavLinkItem to="/topics">Topics to Cover</NavLinkItem>
+        <NavLinkItem to="/intro">Intro</NavLinkItem>
+        <NavLinkItem to="/primary-components">Primary Components</NavLinkItem>
+      </ul>
     </div>
   );
 };
